@@ -15,13 +15,17 @@ function News({ match }) {
     );
     const newsList = await data.json();
 
-    console.log(newsList);
+    setNews(newsList.data);
+    console.log(newsList.data);
   };
 
   return (
     <div>
       <h1>News Page</h1>
       <Link to="/schools"> back >> </Link>
+      {news.map((article) => (
+        <h3 key={article.id}>{article.title}</h3>
+      ))}
     </div>
   );
 }
