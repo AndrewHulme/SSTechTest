@@ -3,11 +3,7 @@ import React, { Component } from "react";
 import "./App.css";
 
 class App extends Component {
-  constructor() {
-    super();
-    this.state = {};
-  }
-
+  state = {};
   render() {
     return <div className="App">Hello World!</div>;
   }
