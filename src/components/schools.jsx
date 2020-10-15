@@ -23,12 +23,12 @@ function Schools() {
       <h1>Schools Page</h1>
       {schools.map((school) => (
         <div key={school.id} className="p-4 m-4 bg-gray-200 rounded">
-          <h3>
-            <Link to={`/schools/${school.id}/news`}>{school.title}</Link>{" "}
-          </h3>
-          <button className="bg-green-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-            view >
-          </button>
+          <h3>{school.title}</h3>
+          <Link to={`/schools/${school.id}/news`}>
+            <button className="bg-green-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+              view >
+            </button>
+          </Link>{" "}
         </div>
       ))}
     </div>
