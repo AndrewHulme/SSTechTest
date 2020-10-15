@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-function News({ match }) {
+function NewsList({ match }) {
   useEffect(() => {
     fetchNews();
     console.log(match);
@@ -30,4 +30,4 @@ function News({ match }) {
   );
 }
 
-export default News;
+export default NewsList;

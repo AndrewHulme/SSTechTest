@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 // import "../styles/main.css";
 
-function Schools() {
+function SchoolsList() {
   useEffect(() => {
     fetchSchools();
   }, []);
@@ -38,4 +38,4 @@ function Schools() {
   );
 }
 
-export default Schools;
+export default SchoolsList;
