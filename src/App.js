@@ -2,7 +2,9 @@ import React, { Component } from "react";
 import "./App.css";
 import SchoolsList from "./components/schoolsList.jsx";
 import NewsList from "./components/newsList.jsx";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import Article from "./components/article.jsx";
+
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./styles/main.css";
 
 class App extends Component {
@@ -11,8 +13,11 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-          <Route path="/schools" exact component={SchoolsList} />
-          <Route path="/schools/:id/news" component={NewsList} />
+          <Switch>
+            <Route path="/schools" exact component={SchoolsList} />
+            <Route path="/schools/:id/news/:id" component={Article} />
+            <Route path="/schools/:id/news" component={NewsList} />
+          </Switch>
         </div>
       </Router>
     );
