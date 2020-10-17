@@ -30,7 +30,12 @@ function NewsList(props) {
         {news.map((article) => (
           <div key={article.id} className="p-4 m-4 bg-gray-200 rounded">
             <h3>{article.title}</h3>
-            <Link to={`/schools/${props.match.params.id}/news/${article.id}`}>
+            <Link
+              to={{
+                pathname: `/schools/${props.match.params.id}/news/${article.id}`,
+                state: { schoolName: props.location.state.schoolName },
+              }}
+            >
               <button className="bg-green-600 hover:bg-blue-700 text-white py-2 px-4 rounded">
                 view >
               </button>
