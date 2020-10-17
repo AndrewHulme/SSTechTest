@@ -23,8 +23,7 @@ function Article({ match }) {
       Article
       <Link to="/schools"> back >> </Link>
       <div className="p-4 m-4 bg-gray-200 rounded">
-        <h3>{article.title}</h3>
-
+        <h3 className="text-2xl font-bold">{article.title}</h3>
         <div dangerouslySetInnerHTML={{ __html: article.body }}></div>
       </div>
     </div>

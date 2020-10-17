@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-function NewsList({ match }) {
+function NewsList({ match }, props) {
   useEffect(() => {
     fetchNews();
     console.log(match);
+    console.log(props);
   }, []);
 
+  // const schoolName = ;
   const [news, setNews] = useState([]);
 
   const fetchNews = async () => {
