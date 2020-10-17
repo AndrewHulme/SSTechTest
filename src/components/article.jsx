@@ -9,6 +9,7 @@ function Article(props) {
   }, []);
 
   const [article, setArticle] = useState({});
+  const [files, setFiles] = useState([]);
 
   const fetchArticle = async () => {
     const data = await fetch(
@@ -17,6 +18,8 @@ function Article(props) {
     const news = await data.json();
 
     setArticle(news.data);
+    setFiles(news.data.files);
+
     console.log(news.data);
   };
 
@@ -28,6 +31,11 @@ function Article(props) {
       <div className="p-4 m-4 bg-gray-200 rounded">
         <h3 className="text-2xl font-bold">{article.title}</h3>
         <div dangerouslySetInnerHTML={{ __html: article.body }}></div>
+      </div>
+      <div className="rounded overflow-hidden shadow-lg px-6 py-4">
+        {files.map((file) => (
+          <a href={file.file}>{file.title}</a>
+        ))}
       </div>
     </div>
   );
