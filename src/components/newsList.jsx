@@ -15,7 +15,7 @@ function NewsList(props) {
 
   const fetchNews = async () => {
     const data = await fetch(
-      `https://api.schoolspider.co.uk/v1/schools/${props.match.params.id}/news`
+      `https://api.schoolspider.co.uk/v1${props.match.url}`
     );
     const newsList = await data.json();
 

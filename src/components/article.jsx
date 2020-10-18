@@ -39,9 +39,11 @@ function Article(props) {
         <h3 className="text-2xl font-bold">{article.title}</h3>
         <div dangerouslySetInnerHTML={{ __html: article.body }}></div>
       </div>
-      {images.map((image) => (
-        <img src={image.small} />
-      ))}
+      <div className="grid grid-cols-5 gap-3">
+        {images.map((image) => (
+          <img src={image.small} />
+        ))}
+      </div>
       {files.map((file) => (
         <a
           href={file.file}
