@@ -1,15 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 // import Card from "./card.jsx";
 // import "../styles/main.css";
 
 function SchoolsList(props) {
+  // const test = (hello) => {
+  //   console.log("yo");
+  //   updateSearch(hello);
+  // };
+
+  const [search, updateSearch] = useState("");
+
+  let filteredSchools = props.schools.filter((school) => {
+    return school.title.toLowerCase().indexOf(search.toLowerCase()) !== -1;
+  });
+
   return (
     <div>
       <h1>Schools Page</h1>
 
+      <input
+        className="p-4 m-4 bg-gray-200 rounded"
+        type="text"
+        placeholder="Search"
+        value={search}
+        onChange={(e) => updateSearch(e.target.value)}
+      ></input>
+
       <div className="grid grid-cols-3 gap-4">
-        {props.schools.map((school) => (
+        {filteredSchools.map((school) => (
           <div key={school.id} className="p-4 m-4 bg-gray-200 rounded">
             <h3>{school.title}</h3>
             <Link
