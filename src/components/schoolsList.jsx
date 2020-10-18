@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import SearchBar from "./searchBar.jsx";
 // import Card from "./card.jsx";
 // import "../styles/main.css";
 
@@ -19,13 +20,7 @@ function SchoolsList(props) {
     <div>
       <h1>Schools Page</h1>
 
-      <input
-        className="p-4 m-4 bg-gray-200 rounded"
-        type="text"
-        placeholder="Search"
-        value={search}
-        onChange={(e) => updateSearch(e.target.value)}
-      ></input>
+      <SearchBar search={search} updateSearch={updateSearch} />
 
       <div className="grid grid-cols-3 gap-4">
         {filteredSchools.map((school) => (
