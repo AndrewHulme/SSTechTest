@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import SearchBar from "./searchBar.jsx";
 
 function NewsList(props) {
   useEffect(() => {
@@ -10,6 +11,7 @@ function NewsList(props) {
 
   // const schoolName = ;
   const [news, setNews] = useState([]);
+  const [search, updateSearch] = useState("");
 
   const fetchNews = async () => {
     const data = await fetch(
@@ -21,6 +23,10 @@ function NewsList(props) {
     console.log(newsList.data);
   };
 
+  let filteredNews = news.filter((article) => {
+    return article.title.toLowerCase().indexOf(search.toLowerCase()) !== -1;
+  });
+
   return (
     <div>
       <h1>News Page</h1>
@@ -29,8 +35,10 @@ function NewsList(props) {
       </h1>
       <Link to="/schools"> back >> </Link>
 
+      <SearchBar search={search} updateSearch={updateSearch} />
+
       <div className="grid grid-cols-3 gap-4">
-        {news.map((article) => (
+        {filteredNews.map((article) => (
           <div key={article.id} className="p-4 m-4 bg-gray-200 rounded">
             <h3>{article.title}</h3>
             <Link
