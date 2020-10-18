@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-function NewsList({ match }) {
+function NewsList(props) {
   useEffect(() => {
     fetchNews();
-    console.log(match);
+    // console.log(match);
+    console.log(props);
   }, []);
 
   // const schoolName = ;
@@ -12,7 +13,7 @@ function NewsList({ match }) {
 
   const fetchNews = async () => {
     const data = await fetch(
-      `https://api.schoolspider.co.uk/v1/schools/${match.params.id}/news`
+      `https://api.schoolspider.co.uk/v1/schools/${props.match.params.id}/news`
     );
     const newsList = await data.json();
 
@@ -32,7 +33,7 @@ function NewsList({ match }) {
             <h3>{article.title}</h3>
             <Link
               to={{
-                pathname: `/schools/${match.params.id}/news/${article.id}`,
+                pathname: `/schools/${props.match.params.id}/news/${article.id}`,
                 // state: { schoolName: props.location.state.schoolName },
               }}
             >

@@ -13,6 +13,7 @@ function App() {
   }, []);
 
   const [schools, setSchools] = useState([]);
+  const [findSchool, setFindSchool] = useState({});
 
   const fetchSchools = async () => {
     const data = await fetch("https://api.schoolspider.co.uk/v1/schools");
@@ -21,6 +22,14 @@ function App() {
     console.log(schoolsList.data);
 
     setSchools(schoolsList.data);
+
+    let schoolsObject = {};
+    schoolsList.data.forEach(
+      (school) => (schoolsObject[school.id] = school.title)
+    );
+    setFindSchool(schoolsObject);
+
+    // console.log(schools);
   };
 
   return (
@@ -33,7 +42,10 @@ function App() {
             render={(props) => <SchoolsList {...props} schools={schools} />}
           />
           <Route path="/schools/:id/news/:id" component={Article} />
-          <Route path="/schools/:id/news" component={NewsList} />
+          <Route
+            path="/schools/:id/news"
+            render={(props) => <NewsList {...props} findSchool={findSchool} />}
+          />
         </Switch>
       </div>
     </Router>
