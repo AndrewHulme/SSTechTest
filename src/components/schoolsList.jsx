@@ -1,30 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 // import Card from "./card.jsx";
 // import "../styles/main.css";
 
-function SchoolsList() {
-  useEffect(() => {
-    fetchSchools();
-  }, []);
-
-  const [schools, setSchools] = useState([]);
-
-  const fetchSchools = async () => {
-    const data = await fetch("https://api.schoolspider.co.uk/v1/schools");
-
-    const schoolsList = await data.json();
-    console.log(schoolsList.data);
-
-    setSchools(schoolsList.data);
-  };
-
+function SchoolsList(props) {
   return (
     <div>
       <h1>Schools Page</h1>
 
       <div className="grid grid-cols-3 gap-4">
-        {schools.map((school) => (
+        {props.schools.map((school) => (
           <div key={school.id} className="p-4 m-4 bg-gray-200 rounded">
             <h3>{school.title}</h3>
             <Link
