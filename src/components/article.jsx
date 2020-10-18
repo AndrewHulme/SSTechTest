@@ -6,18 +6,19 @@ function Article(props) {
   useEffect(() => {
     fetchArticle();
     // console.log(props.match.url);
-    // console.log(article);
-    // console.log(props.match.url.split("/")[2]);
+    console.log(props);
+    console.log(props.match.url.split("/"));
   }, []);
 
   const [article, setArticle] = useState({});
   const [files, setFiles] = useState([]);
   const [images, setImages] = useState([]);
 
+  const currentUrl = props.match.url;
+  const previousUrl = "/schools/" + currentUrl.split("/")[2] + "/news";
+
   const fetchArticle = async () => {
-    const data = await fetch(
-      `https://api.schoolspider.co.uk/v1${props.match.url}`
-    );
+    const data = await fetch(`https://api.schoolspider.co.uk/v1${currentUrl}`);
     const news = await data.json();
 
     setArticle(news.data);
@@ -31,9 +32,9 @@ function Article(props) {
     <div>
       Article
       <h1 className="text-2xl font-bold">
-        {props.findSchool[props.match.url.split("/")[2]]}
+        {props.findSchool[currentUrl.split("/")[2]]}
       </h1>
-      <Link to="/schools"> back >> </Link>
+      <Link to={previousUrl}> back >> </Link>
       <div className="p-4 m-4 bg-gray-200 rounded">
         <h3 className="text-2xl font-bold">{article.title}</h3>
         <div dangerouslySetInnerHTML={{ __html: article.body }}></div>
@@ -47,7 +48,7 @@ function Article(props) {
           className="flex items-center rounded overflow-hidden shadow-lg px-6 py-4"
         >
           <img src={paperclip} className="w-10 h-10 mr-4" />
-          <a>{file.title}.pdf</a>
+          <div>{file.title}.pdf</div>
         </a>
       ))}
     </div>
