@@ -41,7 +41,10 @@ function App() {
             exact
             render={(props) => <SchoolsList {...props} schools={schools} />}
           />
-          <Route path="/schools/:id/news/:id" component={Article} />
+          <Route
+            path="/schools/:id/news/:id"
+            render={(props) => <Article {...props} findSchool={findSchool} />}
+          />
           <Route
             path="/schools/:id/news"
             render={(props) => <NewsList {...props} findSchool={findSchool} />}
