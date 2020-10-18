@@ -24,7 +24,9 @@ function NewsList(props) {
   return (
     <div>
       <h1>News Page</h1>
-      {/* <h1 className="text-2xl font-bold">{props.location.state.schoolName}</h1> */}
+      <h1 className="text-2xl font-bold">
+        {props.findSchool[props.match.params.id]}
+      </h1>
       <Link to="/schools"> back >> </Link>
 
       <div className="grid grid-cols-3 gap-4">
