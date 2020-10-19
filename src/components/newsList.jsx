@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import SearchBar from "./searchBar.jsx";
+import CardGrid from "./cardGrid.jsx";
 
 function NewsList(props) {
   useEffect(() => {
@@ -37,14 +38,19 @@ function NewsList(props) {
 
       <SearchBar search={search} updateSearch={updateSearch} />
 
-      <div className="grid grid-cols-3 gap-4">
+      <CardGrid
+        filteredSearch={filteredNews}
+        page={"newsList"}
+        schoolId={props.match.params.id}
+      />
+
+      {/* <div className="grid grid-cols-3 gap-4">
         {filteredNews.map((article) => (
           <div key={article.id} className="p-4 m-4 bg-gray-200 rounded">
             <h3>{article.title}</h3>
             <Link
               to={{
                 pathname: `/schools/${props.match.params.id}/news/${article.id}`,
-                // state: { schoolName: props.location.state.schoolName },
               }}
             >
               <button className="bg-green-600 hover:bg-blue-700 text-white py-2 px-4 rounded">
@@ -53,7 +59,7 @@ function NewsList(props) {
             </Link>{" "}
           </div>
         ))}
-      </div>
+      </div> */}
     </div>
   );
 }

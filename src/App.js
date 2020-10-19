@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
-import "./App.css";
 import SchoolsList from "./components/schoolsList.jsx";
 import NewsList from "./components/newsList.jsx";
 import Article from "./components/article.jsx";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import "./App.css";
 import "./styles/main.css";
 import "react-image-lightbox/style.css";
 
@@ -18,10 +18,7 @@ function App() {
 
   const fetchSchools = async () => {
     const data = await fetch("https://api.schoolspider.co.uk/v1/schools");
-
     const schoolsList = await data.json();
-    console.log(schoolsList.data);
-
     setSchools(schoolsList.data);
 
     let schoolsObject = {};
@@ -29,8 +26,6 @@ function App() {
       (school) => (schoolsObject[school.id] = school.title)
     );
     setFindSchool(schoolsObject);
-
-    // console.log(schools);
   };
 
   return (
