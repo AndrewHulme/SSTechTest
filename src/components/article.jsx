@@ -59,16 +59,21 @@ function Article(props) {
           <div>{file.title}.pdf</div>
         </a>
       ))}
-      <div className="grid grid-cols-3 gap-3">
+      <div className="grid grid-cols-2 gap-3">
         {videos.map((video) => (
-          // <div
-          //   className="w-10 h-10"
-          //   dangerouslySetInnerHTML={{ __html: video.content }}
-          <video width="200" height="100" controls>
-            {" "}
-            <source src={video.content}></source>
-          </video>
-          // ></div>
+          <div>
+            {video.content.includes("<iframe") ? (
+              <div
+                className="w-10 h-10"
+                dangerouslySetInnerHTML={{ __html: video.content }}
+              ></div>
+            ) : (
+              <video width="300" controls>
+                {" "}
+                <source src={video.content} type="video/mp4"></source>
+              </video>
+            )}
+          </div>
         ))}
       </div>
     </div>
