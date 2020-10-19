@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import paperclip from "../images/paperclip.png";
+import "../styles/embedVideo.css";
+
 // import ReactPlayer from "react-player";
 
 function Article(props) {
