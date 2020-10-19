@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import ViewButton from "./viewButton.jsx";
 
 function CardGrid(props) {
   return (
@@ -15,9 +16,7 @@ function CardGrid(props) {
                   pathname: `/schools/${result.id}/news`,
                 }}
               >
-                <button className="bg-green-600 hover:bg-blue-700 text-white py-2 px-4 rounded">
-                  view >
-                </button>
+                <ViewButton />
               </Link>{" "}
             </div>
           ) : (
@@ -27,9 +26,7 @@ function CardGrid(props) {
                   pathname: `/schools/${props.schoolId}/news/${result.id}`,
                 }}
               >
-                <button className="bg-green-600 hover:bg-blue-700 text-white py-2 px-4 rounded">
-                  view >
-                </button>
+                <ViewButton />
               </Link>{" "}
             </div>
           )}
