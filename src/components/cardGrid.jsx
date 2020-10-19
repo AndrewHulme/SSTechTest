@@ -1,6 +1,4 @@
 import React from "react";
-// import { Link } from "react-router-dom";
-// import ViewButton from "./viewButton.jsx";
 import Card from "./card.jsx";
 
 function CardGrid(props) {
