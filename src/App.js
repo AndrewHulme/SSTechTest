@@ -6,6 +6,7 @@ import Article from "./components/article.jsx";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./styles/main.css";
+import "react-image-lightbox/style.css";
 
 function App() {
   useEffect(() => {

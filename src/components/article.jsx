@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import Lightbox from "react-image-lightbox";
 import paperclip from "../images/paperclip.png";
 import "../styles/embedVideo.css";
 
@@ -17,6 +18,8 @@ function Article(props) {
   const [files, setFiles] = useState([]);
   const [images, setImages] = useState([]);
   const [videos, setVideos] = useState([]);
+  const [photoIndex, setPhotoIndex] = useState(0);
+  const [isOpen, setIsOpen] = useState(false);
 
   const currentUrl = props.match.url;
   const previousUrl = "/schools/" + currentUrl.split("/")[2] + "/news";
@@ -31,6 +34,11 @@ function Article(props) {
     setVideos(news.data.videos);
 
     console.log(news.data);
+  };
+
+  const lightbox = (index) => {
+    setIsOpen(true);
+    setPhotoIndex(index);
   };
 
   return (
@@ -48,8 +56,8 @@ function Article(props) {
         <h1>TEST</h1>
       ))}
       <div className="grid grid-cols-5 gap-3">
-        {images.map((image) => (
-          <img src={image.small} />
+        {images.map((image, index) => (
+          <img src={image.small} onClick={() => lightbox(index)} />
         ))}
       </div>
       {files.map((file) => (
@@ -80,6 +88,22 @@ function Article(props) {
           </div>
         ))}
       </div>
+      {isOpen && (
+        <Lightbox
+          mainSrc={images[photoIndex].large}
+          nextSrc={images[(photoIndex + 1) % images.length].large}
+          prevSrc={
+            images[(photoIndex + images.length - 1) % images.length].large
+          }
+          onCloseRequest={() => setIsOpen(false)}
+          onMovePrevRequest={() =>
+            setPhotoIndex((photoIndex + images.length - 1) % images.length)
+          }
+          onMoveNextRequest={() =>
+            setPhotoIndex((photoIndex + 1) % images.length)
+          }
+        />
+      )}
     </div>
   );
 }
