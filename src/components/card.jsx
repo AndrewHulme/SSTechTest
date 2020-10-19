@@ -8,17 +8,13 @@ function Card(props) {
       <h3>{props.result.title}</h3>
 
       {props.page === "schoolsList" ? (
-        <div>
-          <Link to={`/schools/${props.result.id}/news`}>
-            <ViewButton />
-          </Link>{" "}
-        </div>
+        <Link to={`/schools/${props.result.id}/news`}>
+          <ViewButton />
+        </Link>
       ) : (
-        <div>
-          <Link to={`/schools/${props.schoolId}/news/${props.result.id}`}>
-            <ViewButton />
-          </Link>{" "}
-        </div>
+        <Link to={`/schools/${props.schoolId}/news/${props.result.id}`}>
+          <ViewButton />
+        </Link>
       )}
     </div>
   );
