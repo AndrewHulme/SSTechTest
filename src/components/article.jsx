@@ -63,10 +63,12 @@ function Article(props) {
         {videos.map((video) => (
           <div>
             {video.content.includes("<iframe") ? (
-              <div
-                className="w-10 h-10"
-                dangerouslySetInnerHTML={{ __html: video.content }}
-              ></div>
+              <div className="videoWrapper">
+                <div
+                  // className="w-10 h-10"
+                  dangerouslySetInnerHTML={{ __html: video.content }}
+                ></div>
+              </div>
             ) : (
               <video width="300" controls>
                 {" "}
