@@ -14,10 +14,14 @@ Tech test which allows users to:
 * View videos for each news listing
 
 
-
-## Approach
-
 ## Technology used
+* React
+* JavaScript
+* HTML
+* CSS
+* Tailwind CSS
+* React Router
+* React Image Lightbox
 
 ## How to run the project:
 
