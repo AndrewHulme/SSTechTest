@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import Lightbox from "react-image-lightbox";
 import SchoolTitle from "./schoolTitle.jsx";
 import BackButton from "./backButton.jsx";
