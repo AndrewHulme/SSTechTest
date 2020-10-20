@@ -6,6 +6,7 @@ import BackButton from "./backButton.jsx";
 import ArticleText from "./articleText.jsx";
 import ImageGrid from "./imageGrid.jsx";
 import FilesList from "./filesList.jsx";
+import VideoGrid from "./videoGrid.jsx";
 import "../styles/embedVideo.css";
 
 function Article(props) {
@@ -50,25 +51,8 @@ function Article(props) {
 
       <FilesList files={files} />
 
-      <div className="grid grid-cols-2 gap-3">
-        {videos.map((video) => (
-          <div>
-            {video.content.includes("<iframe") ? (
-              <div className="videoWrapper">
-                <div
-                  // className="w-10 h-10"
-                  dangerouslySetInnerHTML={{ __html: video.content }}
-                ></div>
-              </div>
-            ) : (
-              <video width="300" controls>
-                {" "}
-                <source src={video.content} type="video/mp4"></source>
-              </video>
-            )}
-          </div>
-        ))}
-      </div>
+      <VideoGrid videos={videos} />
+
       {isOpen && (
         <Lightbox
           mainSrc={images[photoIndex].large}
