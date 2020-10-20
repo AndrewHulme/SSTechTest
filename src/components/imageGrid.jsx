@@ -7,6 +7,7 @@ function ImageGrid(props) {
         <img
           key={index}
           src={image.small}
+          alt={""}
           onClick={() => props.lightbox(index)}
         />
       ))}
