@@ -13,6 +13,11 @@ Tech test which allows users to:
 * View related files/pdfs for each news listing
 * View videos for each news listing
 
+## URLs
+The frontend URLs are similar to the paths from the backend. For example:
+* List of schools - [http://localhost:3000/schools](http://localhost:3000/schools)
+* List of news for a specific school - [http://localhost:3000/schools/413/news](http://localhost:3000/schools/413/news)
+* Article for a news listing - [http://localhost:3000/schools/413/news/48332](http://localhost:3000/schools/413/news/48332)
 
 ## Technology used
 * React
