@@ -4,6 +4,7 @@ import Lightbox from "react-image-lightbox";
 import SchoolTitle from "./schoolTitle.jsx";
 import BackButton from "./backButton.jsx";
 import ArticleText from "./articleText.jsx";
+import ImageGrid from "./imageGrid.jsx";
 import paperclip from "../images/paperclip.png";
 import "../styles/embedVideo.css";
 
@@ -45,11 +46,8 @@ function Article(props) {
 
       <ArticleText article={article} />
 
-      <div className="grid grid-cols-5 gap-3">
-        {images.map((image, index) => (
-          <img src={image.small} onClick={() => lightbox(index)} />
-        ))}
-      </div>
+      <ImageGrid images={images} lightbox={lightbox} />
+
       {files.map((file) => (
         <a
           href={file.file}
