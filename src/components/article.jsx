@@ -5,7 +5,7 @@ import SchoolTitle from "./schoolTitle.jsx";
 import BackButton from "./backButton.jsx";
 import ArticleText from "./articleText.jsx";
 import ImageGrid from "./imageGrid.jsx";
-import paperclip from "../images/paperclip.png";
+import FilesList from "./filesList.jsx";
 import "../styles/embedVideo.css";
 
 function Article(props) {
@@ -48,15 +48,8 @@ function Article(props) {
 
       <ImageGrid images={images} lightbox={lightbox} />
 
-      {files.map((file) => (
-        <a
-          href={file.file}
-          className="flex items-center rounded overflow-hidden shadow-lg px-6 py-4"
-        >
-          <img src={paperclip} className="w-10 h-10 mr-4" />
-          <div>{file.title}.pdf</div>
-        </a>
-      ))}
+      <FilesList files={files} />
+
       <div className="grid grid-cols-2 gap-3">
         {videos.map((video) => (
           <div>
