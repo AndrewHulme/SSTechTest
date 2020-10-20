@@ -2,16 +2,16 @@
 
 ## Description
 Tech test which allows users to:
-* Navigate through website by clicking links
+* Navigate through the website by clicking links
 * Open a specific page by visiting the URL
-* View list of schools
-* Search through list of schools
-* View list of news for each school
-* Search through list of news for each school
-* View article for each news listing
-* View images for each news listing with lightbox functionality
-* View related files/pdfs for each news listing
-* View videos for each news listing
+* View the list of schools
+* Search through the list of schools
+* View the list of news for each school
+* Search through the list of news for each school
+* View the article for each news listing
+* View the images for each news listing with lightbox functionality
+* View the related files/pdfs for each news listing
+* View the videos for each news listing
 
 ## URLs
 The frontend URLs are similar to the paths from the backend. For example:
