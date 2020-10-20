@@ -4,8 +4,9 @@ import paperclip from "../images/paperclip.png";
 function FilesList(props) {
   return (
     <div className="m-4">
-      {props.files.map((file) => (
+      {props.files.map((file, index) => (
         <a
+          key={index}
           href={file.file}
           className="flex items-center rounded overflow-hidden shadow-lg px-6 py-4"
         >

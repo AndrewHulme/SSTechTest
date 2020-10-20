@@ -3,8 +3,8 @@ import React from "react";
 function VideoGrid(props) {
   return (
     <div className="grid grid-cols-2 gap-3 m-4">
-      {props.videos.map((video) => (
-        <div>
+      {props.videos.map((video, index) => (
+        <div key={index}>
           {video.content.includes("<iframe") ? (
             <div className="videoWrapper">
               <div dangerouslySetInnerHTML={{ __html: video.content }}></div>
