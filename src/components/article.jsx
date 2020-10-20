@@ -1,17 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Lightbox from "react-image-lightbox";
+import SchoolTitle from "./schoolTitle.jsx";
+import BackButton from "./backButton.jsx";
+import ArticleText from "./articleText.jsx";
 import paperclip from "../images/paperclip.png";
 import "../styles/embedVideo.css";
-
-// import ReactPlayer from "react-player";
 
 function Article(props) {
   useEffect(() => {
     fetchArticle();
-    // console.log(props.match.url);
-    console.log(props);
-    console.log(props.match.url.split("/"));
   }, []);
 
   const [article, setArticle] = useState({});
@@ -32,8 +30,6 @@ function Article(props) {
     setFiles(news.data.files);
     setImages(news.data.images);
     setVideos(news.data.videos);
-
-    console.log(news.data);
   };
 
   const lightbox = (index) => {
@@ -43,18 +39,12 @@ function Article(props) {
 
   return (
     <div>
-      Article
-      <h1 className="text-2xl font-bold">
-        {props.findSchool[currentUrl.split("/")[2]]}
-      </h1>
-      <Link to={previousUrl}> back >> </Link>
-      <div className="p-4 m-4 bg-gray-200 rounded">
-        <h3 className="text-2xl font-bold">{article.title}</h3>
-        <div dangerouslySetInnerHTML={{ __html: article.body }}></div>
-      </div>
-      {videos.map((video) => (
-        <h1>TEST</h1>
-      ))}
+      <SchoolTitle title={props.findSchool[currentUrl.split("/")[2]]} />
+
+      <BackButton url={previousUrl} />
+
+      <ArticleText article={article} />
+
       <div className="grid grid-cols-5 gap-3">
         {images.map((image, index) => (
           <img src={image.small} onClick={() => lightbox(index)} />
