@@ -3,7 +3,12 @@ import SchoolsList from "./components/schoolsList.jsx";
 import NewsList from "./components/newsList.jsx";
 import Article from "./components/article.jsx";
 
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom";
 import "./App.css";
 import "./styles/main.css";
 import "react-image-lightbox/style.css";
@@ -32,6 +37,10 @@ function App() {
     <Router>
       <div className="App">
         <Switch>
+          <Route exact path="/">
+            <Redirect to="/schools" />
+          </Route>
+
           <Route
             path="/schools"
             exact
