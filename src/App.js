@@ -10,7 +10,8 @@ import {
   Route,
   Redirect,
 } from "react-router-dom";
-import "./App.css";
+import "./styles/App.css";
+import "./styles/custom.css";
 import "./styles/main.css";
 import "react-image-lightbox/style.css";
 
