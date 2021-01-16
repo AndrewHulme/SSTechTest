@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import SchoolsList from "./components/schoolsList.jsx";
 import NewsList from "./components/newsList.jsx";
 import Article from "./components/article.jsx";
+import NavBar from "./components/navBar.jsx";
 
 import {
   BrowserRouter as Router,
@@ -36,6 +37,8 @@ function App() {
   return (
     <Router>
       <div className="App">
+        <NavBar />
+
         <Switch>
           <Route exact path="/">
             <Redirect to="/schools" />
