@@ -53,7 +53,7 @@ function NavBar() {
           </div>
         </div>
 
-        <div
+        {/* <div
           id="o-header-search"
           class="o-header__row o-header__search o--if-js"
           role="search"
@@ -92,10 +92,10 @@ function NavBar() {
               </button>
             </form>
           </div>
-        </div>
+        </div> */}
       </header>
 
-      <div
+      {/* <div
         class="o-header__drawer"
         id="o-header-drawer"
         role="navigation"
@@ -104,7 +104,7 @@ function NavBar() {
         data-o-header-drawer--no-js
       >
         <div class="o-header__drawer-inner">
-          {/* <div class="o-header__drawer-tools">
+          <div class="o-header__drawer-tools">
             <button
               type="button"
               class="o-header__drawer-tools-close"
@@ -113,7 +113,7 @@ function NavBar() {
             >
               <span class="o-header__visually-hidden">Close drawer menu</span>
             </button>
-          </div> */}
+          </div>
 
           <div class="o-header__drawer-search">
             <form
@@ -145,7 +145,7 @@ function NavBar() {
             </form>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
