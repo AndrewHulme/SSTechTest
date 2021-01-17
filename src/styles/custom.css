@@ -13,5 +13,8 @@ body {
 
 .schoolTitle {
   font-size: 25px;
-  padding-top: 6px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #262a33;
+  color: #f2dfce;
 }
