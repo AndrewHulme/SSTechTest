@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function NavBar() {
   return (
@@ -23,23 +24,30 @@ function NavBar() {
               </div>
 
               <div class="o-header__top-column o-header__top-column--center">
-                <a
-                  class="o-header__top-logo"
-                  href="/"
-                  title="Go to Financial Times homepage"
-                >
-                  <span class="o-header__visually-hidden">Financial Times</span>
-                </a>
+                <Link to={`/`}>
+                  <a
+                    class="o-header__top-logo"
+                    title="Go to Financial Times homepage"
+                  >
+                    <span class="o-header__visually-hidden">
+                      Financial Times
+                    </span>
+                  </a>
+                </Link>
               </div>
 
               <div class="o-header__top-column o-header__top-column--right">
-                <a
-                  class="o-header__top-link o-header__top-link--myft"
-                  href="/myft"
-                  aria-label="My F T"
-                >
-                  <span class="o-header__visually-hidden">myFT</span>
-                </a>
+                <Link to={`/`}>
+                  <a
+                    class="o-header__top-link"
+                    href="/myft"
+                    aria-label="My F T"
+                  >
+                    <span class="o-header navSchoolName o-teaser__heading">
+                      HOME
+                    </span>
+                  </a>
+                </Link>
               </div>
             </div>
           </div>

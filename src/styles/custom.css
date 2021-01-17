@@ -1,3 +1,8 @@
 body {
   background-color: #fff1e5;
 }
+
+.navSchoolName {
+  font-size: 19px;
+  vertical-align: 14px;
+}
