@@ -2,15 +2,22 @@ import React from "react";
 
 function ImageGrid(props) {
   return (
-    <div className="grid grid-cols-5 gap-3 m-4">
-      {props.images.map((image, index) => (
-        <img
-          key={index}
-          src={image.small}
-          alt={""}
-          onClick={() => props.lightbox(index)}
-        />
-      ))}
+    <div className="o-grid-container">
+      <div className="o-grid-row">
+        {props.images.map((image, index) => (
+          <div data-o-grid-colspan="2">
+            <div className="demo-cell">
+              <img
+                key={index}
+                src={image.small}
+                alt={""}
+                onClick={() => props.lightbox(index)}
+              />
+            </div>
+            <br />
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

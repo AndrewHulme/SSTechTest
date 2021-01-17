@@ -3,12 +3,22 @@ import Card from "./card.jsx";
 
 function CardGrid(props) {
   return (
-    <div className="grid grid-cols-3 gap-4">
-      {props.filteredSearch.map((result) => (
-        <div key={result.id}>
-          <Card result={result} page={props.page} schoolId={props.schoolId} />
-        </div>
-      ))}
+    <div className="o-grid-container">
+      <div className="o-grid-row">
+        {props.filteredSearch.map((result) => (
+          <div data-o-grid-colspan="4">
+            <div className="demo-cell">
+              <div key={result.id}>
+                <Card
+                  result={result}
+                  page={props.page}
+                  schoolId={props.schoolId}
+                />
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
