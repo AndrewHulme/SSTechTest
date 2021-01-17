@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import SearchBar from "./searchBar.jsx";
 import CardGrid from "./cardGrid.jsx";
-import BackButton from "./backButton.jsx";
 import SchoolTitle from "./schoolTitle.jsx";
 
 function NewsList(props) {
@@ -29,8 +28,6 @@ function NewsList(props) {
       <SearchBar search={search} updateSearch={updateSearch} />
 
       <SchoolTitle title={props.findSchool[props.match.params.id]} />
-
-      <BackButton url={"/schools"} />
 
       <CardGrid
         filteredSearch={filteredNews}

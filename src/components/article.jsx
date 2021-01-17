@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Lightbox from "react-image-lightbox";
 import SchoolTitle from "./schoolTitle.jsx";
-import BackButton from "./backButton.jsx";
 import ArticleText from "./articleText.jsx";
 import ImageGrid from "./imageGrid.jsx";
 import FilesList from "./filesList.jsx";
@@ -21,7 +20,7 @@ function Article(props) {
   const [isOpen, setIsOpen] = useState(false);
 
   const currentUrl = props.match.url;
-  const previousUrl = "/schools/" + currentUrl.split("/")[2] + "/news";
+  // const previousUrl = "/schools/" + currentUrl.split("/")[2] + "/news";
 
   const fetchArticle = async () => {
     const data = await fetch(`https://api.schoolspider.co.uk/v1${currentUrl}`);
@@ -41,8 +40,6 @@ function Article(props) {
   return (
     <div>
       <SchoolTitle title={props.findSchool[currentUrl.split("/")[2]]} />
-
-      <BackButton url={previousUrl} />
 
       <ArticleText article={article} />
 
