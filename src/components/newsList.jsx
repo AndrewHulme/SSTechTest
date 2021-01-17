@@ -25,7 +25,9 @@ function NewsList(props) {
 
   return (
     <div>
-      <SearchBar search={search} updateSearch={updateSearch} />
+      {props.showSearchBar === true && (
+        <SearchBar search={search} updateSearch={updateSearch} />
+      )}
 
       <SchoolTitle title={props.findSchool[props.match.params.id]} />
 

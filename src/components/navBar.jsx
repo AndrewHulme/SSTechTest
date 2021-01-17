@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function NavBar() {
+function NavBar(props) {
   return (
     <div>
       <header
@@ -13,14 +13,19 @@ function NavBar() {
           <div class="o-header__container">
             <div class="o-header__top-wrapper">
               <div class="o-header__top-column o-header__top-column--left">
-                <a
-                  href="#o-header-search"
-                  class="o-header__top-link o-header__top-link--search"
-                  aria-controls="o-header-search"
-                  title="Open search bar"
+                <button
+                  onClick={() => props.setShowSearchBar(!props.showSearchBar)}
                 >
-                  <span class="o-header__top-link-label">Open search bar</span>
-                </a>
+                  <a
+                    class="o-header__top-link o-header__top-link--search"
+                    aria-controls="o-header-search"
+                    title="Open search bar"
+                  >
+                    <span class="o-header__top-link-label">
+                      Open search bar
+                    </span>
+                  </a>
+                </button>
               </div>
 
               <div class="o-header__top-column o-header__top-column--center">

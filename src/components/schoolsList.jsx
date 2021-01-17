@@ -11,7 +11,9 @@ function SchoolsList(props) {
 
   return (
     <div>
-      <SearchBar search={search} updateSearch={updateSearch} />
+      {props.showSearchBar === true && (
+        <SearchBar search={search} updateSearch={updateSearch} />
+      )}
       <CardGrid filteredSearch={filteredSchools} page={"schoolsList"} />
     </div>
   );

@@ -22,6 +22,7 @@ function App() {
 
   const [schools, setSchools] = useState([]);
   const [findSchool, setFindSchool] = useState({});
+  const [showSearchBar, setShowSearchBar] = useState(false);
 
   const fetchSchools = async () => {
     const data = await fetch("https://api.schoolspider.co.uk/v1/schools");
@@ -38,7 +39,10 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <NavBar />
+        <NavBar
+          showSearchBar={showSearchBar}
+          setShowSearchBar={setShowSearchBar}
+        />
 
         <Switch>
           <Route exact path="/">
@@ -48,7 +52,13 @@ function App() {
           <Route
             path="/schools"
             exact
-            render={(props) => <SchoolsList {...props} schools={schools} />}
+            render={(props) => (
+              <SchoolsList
+                {...props}
+                schools={schools}
+                showSearchBar={showSearchBar}
+              />
+            )}
           />
           <Route
             path="/schools/:id/news/:id"
@@ -56,7 +66,13 @@ function App() {
           />
           <Route
             path="/schools/:id/news"
-            render={(props) => <NewsList {...props} findSchool={findSchool} />}
+            render={(props) => (
+              <NewsList
+                {...props}
+                findSchool={findSchool}
+                showSearchBar={showSearchBar}
+              />
+            )}
           />
         </Switch>
       </div>
