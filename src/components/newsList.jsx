@@ -26,11 +26,11 @@ function NewsList(props) {
 
   return (
     <div>
+      <SearchBar search={search} updateSearch={updateSearch} />
+
       <SchoolTitle title={props.findSchool[props.match.params.id]} />
 
       <BackButton url={"/schools"} />
-
-      <SearchBar search={search} updateSearch={updateSearch} />
 
       <CardGrid
         filteredSearch={filteredNews}

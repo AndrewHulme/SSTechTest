@@ -3,7 +3,7 @@ import Card from "./card.jsx";
 
 function CardGrid(props) {
   return (
-    <div className="o-grid-container">
+    <div className="o-grid-container cardGrid">
       <div className="o-grid-row">
         {props.filteredSearch.map((result) => (
           <div data-o-grid-colspan="4">

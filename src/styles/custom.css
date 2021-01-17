@@ -6,3 +6,12 @@ body {
   font-size: 19px;
   vertical-align: 14px;
 }
+
+.cardGrid {
+  padding-top: 15px;
+}
+
+.schoolTitle {
+  font-size: 25px;
+  padding-top: 6px;
+}
