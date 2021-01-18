@@ -2,9 +2,15 @@ import React from "react";
 
 function ArticleText(props) {
   return (
-    <div className="p-4 m-4 bg-gray-200 rounded">
-      <h3 className="text-2xl font-bold">{props.article.title}</h3>
-      <div dangerouslySetInnerHTML={{ __html: props.article.body }}></div>
+    <div class="o-topper o-topper--centered o-topper--color-paper">
+      <div class="o-topper__content">
+        <h1 class="o-topper__headline">{props.article.title}</h1>
+        <div class="o-topper__standfirst">
+          <div dangerouslySetInnerHTML={{ __html: props.article.body }}></div>
+        </div>
+      </div>
+
+      <div class="o-topper__background"></div>
     </div>
   );
 }
