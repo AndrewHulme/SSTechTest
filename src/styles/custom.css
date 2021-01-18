@@ -18,3 +18,8 @@ body {
   background-color: #262a33;
   color: #f2dfce;
 }
+
+.fileHeading {
+  text-align: left;
+  padding-left: 45px;
+}
