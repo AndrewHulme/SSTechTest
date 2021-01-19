@@ -9,4 +9,12 @@ describe("ArticleText", () => {
     const title = wrapper.find("h1");
     expect(title.text()).toBe("Title for Testing");
   });
+
+  it("should show the body of text", () => {
+    const wrapper = shallow(<ArticleText article={article} />);
+    const body = wrapper.find("div.bodyText");
+    expect(body.html()).toEqual(
+      '<div class="bodyText"><p>This is the body text</p>\r\n</div>'
+    );
+  });
 });

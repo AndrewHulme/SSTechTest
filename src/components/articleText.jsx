@@ -6,7 +6,10 @@ function ArticleText(props) {
       <div class="o-topper__content">
         <h1 class="o-topper__headline">{props.article.title}</h1>
         <div class="o-topper__standfirst">
-          <div dangerouslySetInnerHTML={{ __html: props.article.body }}></div>
+          <div
+            className="bodyText"
+            dangerouslySetInnerHTML={{ __html: props.article.body }}
+          ></div>
         </div>
       </div>
 
