@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import SearchBar from "./searchBar.jsx";
 import CardGrid from "./cardGrid.jsx";
 import SchoolTitle from "./schoolTitle.jsx";
+import { filter } from "./filter";
 
 function NewsList(props) {
   useEffect(() => {
@@ -19,9 +20,7 @@ function NewsList(props) {
     setNews(newsList.data);
   };
 
-  let filteredNews = news.filter((article) => {
-    return article.title.toLowerCase().indexOf(search.toLowerCase()) !== -1;
-  });
+  let filteredNews = filter(news, search);
 
   return (
     <div>

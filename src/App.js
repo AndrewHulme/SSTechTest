@@ -29,8 +29,6 @@ function App() {
     const schoolsList = await data.json();
     setSchools(schoolsList.data);
 
-    console.log(schoolsList.data);
-
     let schoolsObject = {};
     schoolsList.data.forEach(
       (school) => (schoolsObject[school.id] = school.title)

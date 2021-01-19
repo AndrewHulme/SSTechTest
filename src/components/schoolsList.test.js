@@ -31,6 +31,17 @@ const schools = [
   },
 ];
 
+// const filteredSchools = [
+//   {
+//     active: true,
+//     address: "Abingdon Road Reddish Stockport SK5 7ET",
+//     domain: "www.abingdon.schoolspider.co.uk",
+//     id: 527,
+//     title: "Abingdon Primary School",
+//     using_wonde: true,
+//   },
+// ];
+
 describe("SchoolsList", () => {
   it("should only render CardGrid initially", () => {
     const wrapper = shallow(
@@ -51,4 +62,24 @@ describe("SchoolsList", () => {
     expect(cardGrid.exists()).toBe(true);
     expect(searchBar.exists()).toBe(true);
   });
+
+  //   it("should filter schools", () => {
+  //     const realUseState = React.useState;
+  //     const stubInitialState = ["Abingdon"];
+  //     jest
+  //       .spyOn(React, "useState")
+  //       .mockImplementationOnce(() => realUseState(stubInitialState));
+
+  //     const wrapper = shallow(
+  //       <SchoolsList schools={schools} showSearchBar={true} />
+  //     );
+
+  //     const cardGrid = wrapper.find(CardGrid);
+  //     expect(cardGrid.props()).toMatchObject({
+  //       filteredSearch: filteredSchools,
+  //       page: "schoolsList",
+  //     });
+
+  // wrapper.instance().updateSearch("Village");
+  //   });
 });

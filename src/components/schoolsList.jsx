@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 import SearchBar from "./searchBar.jsx";
 import CardGrid from "./cardGrid.jsx";
+import { filter } from "./filter";
 
 function SchoolsList(props) {
   const [search, updateSearch] = useState("");
 
-  let filteredSchools = props.schools.filter((school) => {
-    return school.title.toLowerCase().indexOf(search.toLowerCase()) !== -1;
-  });
+  let filteredSchools = filter(props.schools, search);
 
   return (
     <div>
