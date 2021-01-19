@@ -20,7 +20,6 @@ function Article(props) {
   const [isOpen, setIsOpen] = useState(false);
 
   const currentUrl = props.match.url;
-  // const previousUrl = "/schools/" + currentUrl.split("/")[2] + "/news";
 
   const fetchArticle = async () => {
     const data = await fetch(`https://api.schoolspider.co.uk/v1${currentUrl}`);
