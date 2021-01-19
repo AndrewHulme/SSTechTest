@@ -16,11 +16,11 @@ function Card(props) {
 
         {props.page === "schoolsList" ? (
           <Link to={`/schools/${props.result.id}/news`}>
-            <ViewButton />
+            <ViewButton id={props.result.id} />
           </Link>
         ) : (
           <Link to={`/schools/${props.schoolId}/news/${props.result.id}`}>
-            <ViewButton />
+            <ViewButton id={props.result.id} />
           </Link>
         )}
       </div>
