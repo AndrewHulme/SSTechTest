@@ -9,6 +9,7 @@ function ArticleText(props) {
         </h1>
         <div class="o-topper__standfirst">
           <div
+            id="articleBody"
             className="bodyText"
             dangerouslySetInnerHTML={{ __html: props.article.body }}
           ></div>

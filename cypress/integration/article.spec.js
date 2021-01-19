@@ -19,4 +19,10 @@ describe("Article", () => {
       "Letter to all parents - New National Restrictions"
     );
   });
+
+  it("should show the article body", () => {
+    cy.get("#articleBody").contains(
+      "Please see the attached letter and information leaflet regarding the New National Covid Restrictions. Should you have any queries please contact the academy office"
+    );
+  });
 });
