@@ -25,6 +25,8 @@ function Article(props) {
     const data = await fetch(`https://api.schoolspider.co.uk/v1${currentUrl}`);
     const news = await data.json();
 
+    console.log(news.data);
+
     setArticle(news.data);
     setFiles(news.data.files);
     setImages(news.data.images);
