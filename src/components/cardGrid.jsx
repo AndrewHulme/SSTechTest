@@ -6,7 +6,7 @@ function CardGrid(props) {
     <div className="o-grid-container cardGrid">
       <div className="o-grid-row">
         {props.filteredSearch.map((result) => (
-          <div data-o-grid-colspan="4">
+          <div key={result.id} data-o-grid-colspan="4">
             <div className="demo-cell">
               <div key={result.id}>
                 <Card
