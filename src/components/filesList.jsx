@@ -5,7 +5,7 @@ function FilesList(props) {
     <div className="o-grid-container">
       <div className="o-grid-row">
         {props.files.map((file, index) => (
-          <div data-o-grid-colspan="12">
+          <div key={index} data-o-grid-colspan="12">
             <div className="demo-cell">
               <div
                 className="o-teaser o-teaser--small   "
