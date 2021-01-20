@@ -7,7 +7,7 @@ Check out the app at [https://sstechtest.herokuapp.com/](https://sstechtest.hero
 All information by kind permission of School Spider.
 
 ## Description
-Tech test which allows users to:
+Single-page website which allows users to:
 * Navigate through the website by clicking links
 * Open a specific page by visiting the URL
 * View the list of schools
