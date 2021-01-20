@@ -14,7 +14,7 @@ Tech test which allows users to:
 * View the videos for each news listing
 
 ## URLs
-The frontend URLs are similar to the paths from the backend. For example:
+The frontend URLs follow the paths from the backend. For example:
 * List of schools - [http://localhost:3000/schools](http://localhost:3000/schools)
 * List of news for a specific school - [http://localhost:3000/schools/1/news](http://localhost:3000/schools/1/news)
 * Article for a news listing - [http://localhost:3000/schools/1/news/54182](http://localhost:3000/schools/1/news/54182)
@@ -24,7 +24,9 @@ The frontend URLs are similar to the paths from the backend. For example:
 * JavaScript
 * HTML
 * CSS
-* Tailwind CSS
+* Cypress
+* Jest/Enzyme
+* FT Origami Components (previously used Tailwind CSS)
 * React Router
 * React Image Lightbox
 
@@ -40,5 +42,20 @@ The frontend URLs are similar to the paths from the backend. For example:
 - Start the server
   `$ npm start`
 - Navigate to [http://localhost:3000/schools](http://localhost:3000/schools) in your browser
+
+## Testing
+
+### End to End Testing
+
+- Start the server in the terminal if it is not running yet:
+  `$ npm start`
+- Start Cypress to run the tests:
+  `$ npx cypress open`
+- Click on: `Run all specs`
+
+### Unit Testing
+
+- Start the tests using: `$ npm test`
+- Type `a` to view all tests
 
 
