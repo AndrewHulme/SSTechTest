@@ -1,5 +1,7 @@
 # SS Tech Test
 
+Check out the app at [https://sstechtest.herokuapp.com/](https://sstechtest.herokuapp.com/)
+
 ## Description
 Tech test which allows users to:
 * Navigate through the website by clicking links
@@ -36,26 +38,26 @@ The frontend URLs follow the paths from the backend. For example:
   `$ git clone git@github.com:AndrewHulme/SSTechTest.git`
 - Navigate to local repository
   `$ cd SSTechTest`
-- Install npm if you don't have it
+- Install npm
 - Install all dependencies
   `$ npm install`
 - Start the server
   `$ npm start`
-- Navigate to [http://localhost:3000/schools](http://localhost:3000/schools) in your browser
+- Navigate to [http://localhost:3000/](http://localhost:3000/) in your browser
 
 ## Testing
 
 ### End to End Testing
 
-- Start the server in the terminal if it is not running yet:
+- Start the server
   `$ npm start`
-- Start Cypress to run the tests:
+- Start Cypress to run the tests
   `$ npx cypress open`
-- Click on: `Run all specs`
+- Click on `Run all specs` in Cypress
 
 ### Unit Testing
 
-- Start the tests using: `$ npm test`
+- Start the tests using `$ npm test`
 - Type `a` to view all tests
 
 
