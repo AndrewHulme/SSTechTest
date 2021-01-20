@@ -3,6 +3,7 @@ import SchoolsList from "./components/schoolsList.jsx";
 import NewsList from "./components/newsList.jsx";
 import Article from "./components/article.jsx";
 import NavBar from "./components/navBar.jsx";
+import Footer from "./components/footer.jsx";
 
 import {
   BrowserRouter as Router,
@@ -75,6 +76,8 @@ function App() {
             )}
           />
         </Switch>
+
+        <Footer />
       </div>
     </Router>
   );
