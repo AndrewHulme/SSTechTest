@@ -4,7 +4,7 @@ Check out the app at [https://sstechtest.herokuapp.com/](https://sstechtest.hero
 
 ## Acknowledgement
 
-All information courtesy of School Spider.
+All information by kind permission of School Spider.
 
 ## Description
 Tech test which allows users to:
