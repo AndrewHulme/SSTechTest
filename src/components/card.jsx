@@ -10,9 +10,7 @@ function Card(props) {
       key={props.result.id}
     >
       <div className="o-teaser__content">
-        <h2 className="o-teaser__heading">
-          <a>{props.result.title}</a>
-        </h2>
+        <h2 className="o-teaser__heading">{props.result.title}</h2>
 
         {props.page === "schoolsList" ? (
           <Link to={`/schools/${props.result.id}/news`}>

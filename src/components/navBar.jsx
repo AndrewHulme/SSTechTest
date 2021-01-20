@@ -16,7 +16,7 @@ function NavBar(props) {
                 <button
                   onClick={() => props.setShowSearchBar(!props.showSearchBar)}
                 >
-                  <a
+                  <div
                     className="o-header__top-link o-header__top-link--search"
                     aria-controls="o-header-search"
                     title="Open search bar"
@@ -24,7 +24,7 @@ function NavBar(props) {
                     <span className="o-header__top-link-label">
                       Open search bar
                     </span>
-                  </a>
+                  </div>
                 </button>
               </div>
 
