@@ -14,7 +14,7 @@ describe("ArticleText", () => {
     const wrapper = shallow(<ArticleText article={article} />);
     const body = wrapper.find("div.bodyText");
     expect(body.html()).toEqual(
-      '<div class="bodyText"><p>This is the body text</p>\r\n</div>'
+      '<div id="articleBody" class="bodyText"><p>This is the body text</p>\r\n</div>'
     );
   });
 });

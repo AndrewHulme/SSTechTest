@@ -25,4 +25,9 @@ describe("Article", () => {
       "Please see the attached letter and information leaflet regarding the New National Covid Restrictions. Should you have any queries please contact the academy office"
     );
   });
+
+  it("should show the article pdfs", () => {
+    cy.get("#0").contains("National Restrictions.pdf");
+    cy.get("#1").contains("Guidance for parents.pdf");
+  });
 });
