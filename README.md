@@ -2,6 +2,10 @@
 
 Check out the app at [https://sstechtest.herokuapp.com/](https://sstechtest.herokuapp.com/)
 
+## Acknowledgement
+
+All information courtesy of School Spider.
+
 ## Description
 Tech test which allows users to:
 * Navigate through the website by clicking links
