@@ -5,12 +5,12 @@ import ViewButton from "./viewButton.jsx";
 function Card(props) {
   return (
     <div
-      class="o-teaser o-teaser--small   "
+      className="o-teaser o-teaser--small   "
       data-o-component="o-teaser"
       key={props.result.id}
     >
-      <div class="o-teaser__content">
-        <h2 class="o-teaser__heading">
+      <div className="o-teaser__content">
+        <h2 className="o-teaser__heading">
           <a>{props.result.title}</a>
         </h2>
 

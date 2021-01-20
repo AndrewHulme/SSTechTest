@@ -2,12 +2,12 @@ import React from "react";
 
 function ArticleText(props) {
   return (
-    <div class="o-topper o-topper--centered o-topper--color-paper">
-      <div class="o-topper__content">
-        <h1 id="articleTitle" class="o-topper__headline">
+    <div className="o-topper o-topper--centered o-topper--color-paper">
+      <div className="o-topper__content">
+        <h1 id="articleTitle" className="o-topper__headline">
           {props.article.title}
         </h1>
-        <div class="o-topper__standfirst">
+        <div className="o-topper__standfirst">
           <div
             id="articleBody"
             className="bodyText"
@@ -16,7 +16,7 @@ function ArticleText(props) {
         </div>
       </div>
 
-      <div class="o-topper__background"></div>
+      <div className="o-topper__background"></div>
     </div>
   );
 }

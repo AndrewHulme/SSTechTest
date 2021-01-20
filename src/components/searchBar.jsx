@@ -4,7 +4,7 @@ function SearchBar(props) {
   return (
     <div
       id="o-header-search"
-      class="o-header__row o-header__search o--if-js"
+      className="o-header__row o-header__search o--if-js"
       role="search"
     >
       <input
