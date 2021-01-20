@@ -30,20 +30,20 @@ function NavBar(props) {
 
               <div className="o-header__top-column o-header__top-column--center">
                 <Link to={`/`}>
-                  <a
+                  <div
                     className="o-header__top-logo"
                     title="Go to Financial Times homepage"
                   >
                     <span className="o-header__visually-hidden">
                       Financial Times
                     </span>
-                  </a>
+                  </div>
                 </Link>
               </div>
 
               <div className="o-header__top-column o-header__top-column--right">
                 <Link to={`/`}>
-                  <a
+                  <div
                     className="o-header__top-link"
                     href="/myft"
                     aria-label="My F T"
@@ -51,7 +51,7 @@ function NavBar(props) {
                     <span className="o-header navSchoolName o-teaser__heading">
                       HOME
                     </span>
-                  </a>
+                  </div>
                 </Link>
               </div>
             </div>
