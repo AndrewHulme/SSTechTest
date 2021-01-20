@@ -6,7 +6,7 @@ function ImageGrid(props) {
       <div className="o-grid-row">
         {props.images.map((image, index) => (
           <div data-o-grid-colspan="2">
-            <div className="demo-cell">
+            <div id={"image" + index} className="demo-cell">
               <img
                 key={index}
                 src={image.small}

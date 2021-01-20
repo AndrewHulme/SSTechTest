@@ -12,7 +12,10 @@ function FilesList(props) {
                 data-o-component="o-teaser"
               >
                 <div className="o-teaser__content">
-                  <h2 id={index} className="o-teaser__heading fileHeading">
+                  <h2
+                    id={"file" + index}
+                    className="o-teaser__heading fileHeading"
+                  >
                     <a key={index} href={file.file}>
                       <div>{file.title}.pdf</div>
                     </a>
