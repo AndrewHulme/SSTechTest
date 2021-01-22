@@ -7,6 +7,10 @@ body {
   vertical-align: 14px;
 }
 
+.navHomeButton::before {
+  width: 0px;
+}
+
 .cardGrid {
   padding-top: 15px;
 }

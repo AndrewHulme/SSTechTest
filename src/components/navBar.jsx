@@ -43,7 +43,10 @@ function NavBar(props) {
 
               <div className="o-header__top-column o-header__top-column--right">
                 <Link to={`/`}>
-                  <div className="o-header__top-link" aria-label="Go Home">
+                  <div
+                    className="o-header__top-link navHomeButton"
+                    aria-label="Go Home"
+                  >
                     <span className="o-header navHomeText o-teaser__heading">
                       HOME
                     </span>
