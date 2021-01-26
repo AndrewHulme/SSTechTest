@@ -12,7 +12,7 @@ function NavBar(props) {
         <div className="o-header__row o-header__top">
           <div className="o-header__container">
             <div className="o-header__top-wrapper">
-              <div className="o-header__top-column o-header__top-column--left">
+              <div className="o-header__top-column o-header__top-column--left navSearchWrapper">
                 <button
                   onClick={() => props.setShowSearchBar(!props.showSearchBar)}
                 >
@@ -41,7 +41,7 @@ function NavBar(props) {
                 </Link>
               </div>
 
-              <div className="o-header__top-column o-header__top-column--right">
+              <div className="o-header__top-column o-header__top-column--right navHomeWrapper">
                 <Link to={`/`}>
                   <div
                     className="o-header__top-link navHomeButton"

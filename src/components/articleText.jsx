@@ -15,8 +15,6 @@ function ArticleText(props) {
           ></div>
         </div>
       </div>
-
-      <div className="o-topper__background"></div>
     </div>
   );
 }
