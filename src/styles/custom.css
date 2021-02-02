@@ -70,3 +70,8 @@ video {
   max-width: 100%;
   height: auto;
 }
+
+.schoolspidertitle {
+  padding-top: 5px;
+  height: 40px;
+}

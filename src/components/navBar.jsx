@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import sstitle from "../images/sstitle.png";
+
 function NavBar(props) {
   return (
     <div>
@@ -30,14 +32,11 @@ function NavBar(props) {
 
               <div className="o-header__top-column o-header__top-column--center">
                 <Link to={`/`}>
-                  <div
-                    className="o-header__top-logo"
-                    title="Go to Financial Times homepage"
-                  >
-                    <span className="o-header__visually-hidden">
-                      Financial Times
-                    </span>
-                  </div>
+                  <img
+                    className="schoolspidertitle"
+                    src={sstitle}
+                    alt="School Spider Title"
+                  />
                 </Link>
               </div>
 
